@@ -3,6 +3,7 @@ import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
 import { Pricing } from "@/components/sections/Pricing";
+import { Engagements } from "@/components/sections/Engagements";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -18,6 +19,7 @@ export default function Home() {
         <Services />
         <Process />
         <Pricing />
+        <Engagements />
         <Contact />
       </main>
       <Footer />
