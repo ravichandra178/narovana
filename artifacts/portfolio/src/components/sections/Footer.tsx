@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -27,16 +27,43 @@ export function Footer() {
             <a href="#process" className="hover:text-white transition-colors">Méthode</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
-          
-          <Button 
-            onClick={scrollToTop}
-            variant="ghost" 
-            size="icon" 
-            className="rounded-full hover:bg-white/10 text-white"
-            aria-label="Retour en haut"
-          >
-            <ArrowUp className="w-5 h-5" />
-          </Button>
+
+          <div className="flex items-center gap-3">
+            <a
+              href="mailto:anjaratsilavinanarovana@gmail.com"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/narovana-anjaratsilavina-9786a7379"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href="https://wa.me/261329034246"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-4 h-4" />
+            </a>
+            <Button 
+              onClick={scrollToTop}
+              variant="ghost" 
+              size="icon" 
+              className="rounded-full hover:bg-white/10 text-white"
+              aria-label="Retour en haut"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </Button>
+          </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground opacity-60">

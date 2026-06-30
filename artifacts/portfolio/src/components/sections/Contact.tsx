@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Linkedin, Send } from "lucide-react";
+import { Mail, MapPin, Linkedin, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -55,8 +55,32 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email</h3>
-                  <a href="mailto:contact@narovana.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    contact@narovana.com
+                  <a href="mailto:anjaratsilavinanarovana@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    anjaratsilavinanarovana@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-[#25D366]/10 flex items-center justify-center text-[#25D366] flex-shrink-0">
+                  <MessageCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">WhatsApp</h3>
+                  <a href="https://wa.me/261329034246" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    +261 32 903 42 46
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-[#0077b5]/10 flex items-center justify-center text-[#0077b5] flex-shrink-0">
+                  <Linkedin className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold mb-1">LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/narovana-anjaratsilavina-9786a7379" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    Narovana ANJARATSILAVINA
                   </a>
                 </div>
               </div>
@@ -70,18 +94,6 @@ export function Contact() {
                   <p className="text-muted-foreground">
                     100% à distance. Partout où vous êtes.
                   </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#0077b5]/10 flex items-center justify-center text-[#0077b5] flex-shrink-0">
-                  <Linkedin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="font-bold mb-1">LinkedIn</h3>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    Narovana ANJARATSILAVINA
-                  </a>
                 </div>
               </div>
             </div>
