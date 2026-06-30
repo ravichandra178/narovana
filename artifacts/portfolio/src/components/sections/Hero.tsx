@@ -42,9 +42,15 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex-1 text-center md:text-left"
         >
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-6">
-            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-            Assistante Virtuelle Indépendante
+          <div className="flex flex-wrap items-center gap-3 mb-6 justify-center md:justify-start">
+            <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+              <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+              Assistante Virtuelle Indépendante
+            </div>
+            <div className="inline-flex items-center rounded-full border border-green-400/40 bg-green-50 dark:bg-green-950/30 px-3 py-1 text-sm font-semibold text-green-600 dark:text-green-400">
+              <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
+              Disponible maintenant
+            </div>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-display leading-[1.1] tracking-tight mb-6">
             Retrouvez <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">du temps</span><br />
