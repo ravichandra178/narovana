@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "tqD4Q9toz1_s8m4EtYkgQ"
+uri = "file://artifacts/portfolio/public/images/avatar.png"
+type = "image"
+title = "Professional creative portrait"
+
+[[generated]]
+id = "h-iVKLTWt5GD_XI0Uq9LN"
+uri = "file://artifacts/portfolio/public/images/hero-bg.png"
+type = "image"
+title = "Tropical abstract gradient background"
+
+[[generated]]
+id = "gnPf-iwgIH08z19JVzvvJ"
+uri = "file://artifacts/portfolio/public/images/service-admin.png"
+type = "image"
+title = "3D organized calendar documents"
+
+[[generated]]
+id = "7wyC4YkQtxGQbTypOJ7y_"
+uri = "file://artifacts/portfolio/public/images/service-comms.png"
+type = "image"
+title = "3D communication bubbles"
