@@ -11,6 +11,10 @@ export function Hero() {
     }
   };
 
+  const scrollToBooking = () => {
+    document.querySelector("#rendez-vous")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="hero"
@@ -51,11 +55,12 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
             <Button
-              onClick={scrollToContact}
+              onClick={scrollToBooking}
               size="lg"
               className="w-full sm:w-auto rounded-full bg-primary hover:bg-primary/90 text-white text-base h-14 px-8 group"
+              data-testid="button-hero-booking"
             >
-              Collaborons ensemble
+              Réserver un appel gratuit
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
