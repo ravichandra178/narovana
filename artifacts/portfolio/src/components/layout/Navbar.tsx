@@ -10,6 +10,7 @@ const navItems = [
   { label: "Services", href: "#services" },
   { label: "Méthode", href: "#process" },
   { label: "Tarifs", href: "#tarifs" },
+  { label: "Rendez-vous", href: "#rendez-vous" },
 ];
 
 export function Navbar() {

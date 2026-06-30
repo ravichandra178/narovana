@@ -4,6 +4,7 @@ import { Services } from "@/components/sections/Services";
 import { Process } from "@/components/sections/Process";
 import { Pricing } from "@/components/sections/Pricing";
 import { Engagements } from "@/components/sections/Engagements";
+import { Booking } from "@/components/sections/Booking";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/layout/Navbar";
@@ -20,6 +21,7 @@ export default function Home() {
         <Process />
         <Pricing />
         <Engagements />
+        <Booking />
         <Contact />
       </main>
       <Footer />
