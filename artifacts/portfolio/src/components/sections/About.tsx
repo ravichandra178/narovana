@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import photoNarovana from "@assets/Bleu_Jaune_Créatif_Moderne_Photo_de_Profil_LinkedIn_20260503_2_1782831411774.png";
 
 export function About() {
   const values = [
@@ -53,23 +54,12 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 p-8">
-              <div className="w-full h-full rounded-[2rem] bg-card p-8 shadow-xl flex flex-col justify-center items-center text-center space-y-6 border border-border/50">
-                <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-2">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/>
-                    <path d="M12 16V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/>
-                    <path d="M12 8H12.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold font-display">Ma promesse</h3>
-                <p className="text-muted-foreground text-lg text-balance">
-                  "Vous permettre de vous concentrer à 100% sur votre zone de génie, pendant que je gère tout le reste avec le sourire et un professionnalisme sans faille."
-                </p>
-                <div className="text-right w-full pt-4 text-primary font-display font-bold text-xl italic">
-                  — Narovana
-                </div>
-              </div>
+            <div className="aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 p-4 shadow-2xl">
+              <img
+                src={photoNarovana}
+                alt="Narovana ANJARATSILAVINA"
+                className="w-full h-full object-cover object-top rounded-[2.2rem]"
+              />
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-accent rounded-full opacity-20 blur-2xl"></div>

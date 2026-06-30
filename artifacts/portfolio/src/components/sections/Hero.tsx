@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import photoNarovana from "@assets/Bleu_Jaune_Créatif_Moderne_Photo_de_Profil_LinkedIn_20260503_2_1782831411774.png";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -76,9 +77,9 @@ export function Hero() {
         >
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden relative shadow-2xl border-4 border-background">
             <img
-              src="/images/avatar.png"
+              src={photoNarovana}
               alt="Narovana ANJARATSILAVINA"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
             <div className="absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-black/10"></div>
           </div>
