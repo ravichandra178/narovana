@@ -47,3 +47,17 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# builds
+dist
+build
+out
+artifacts
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# vercel
+.vercel
