@@ -76,3 +76,5 @@ server/*.js
 server/*.js.map
 api/*.js
 api/*.js.map
+!artifacts/portfolio/api/*.js
+!artifacts/portfolio/api/*.js.map
