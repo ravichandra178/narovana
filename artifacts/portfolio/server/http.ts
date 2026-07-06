@@ -1,5 +1,5 @@
 import type { IncomingHttpHeaders, IncomingMessage, ServerResponse } from "node:http";
-import type { EndpointContext, EndpointResult } from "./types";
+import type { EndpointContext, EndpointResult } from "./types.js";
 
 /**
  * Read the raw request body once so the same logic can run in Vercel functions

@@ -25,7 +25,14 @@ function getDeviceType(): VisitorSubmission["deviceType"] {
 }
 
 export function buildVisitorSubmission(): VisitorSubmission {
-  const platform = navigator.userAgentData?.platform ?? navigator.platform ?? "Unknown";
+const platform =
+  (
+    navigator as Navigator & {
+      userAgentData?: { platform?: string };
+    }
+  ).userAgentData?.platform ??
+  navigator.platform ??
+  "Unknown";
   const language = navigator.language || navigator.languages[0] || "unknown";
 
   return {

@@ -1,7 +1,7 @@
 import { z } from "zod";
-import type { ContactSubmission, EndpointContext, EndpointResult, GeoLocation, VisitorSubmission } from "./types";
-import { escapeHtml, formatLabelValue, formatSection } from "./http";
-import { sendAdminEmail } from "./email";
+import type { ContactSubmission, EndpointContext, EndpointResult, GeoLocation, VisitorSubmission } from "./types.js";
+import { escapeHtml, formatLabelValue, formatSection } from "./http.js";
+import { sendAdminEmail } from "./email.js";
 
 const optionalText = (maxLength: number) => z.string().trim().max(maxLength).optional().default("");
 
@@ -211,7 +211,7 @@ export async function handleContactSubmission(context: EndpointContext): Promise
     return { status: 400, body: { ok: false, error: "Malformed contact submission." } };
   }
 
-  const submission = parsed.data;
+  const submission = parsed.data as ContactSubmission;
   if (submission.website) {
     return { status: 400, body: { ok: false, error: "Submission rejected." } };
   }
@@ -251,7 +251,7 @@ export async function handleVisitorSubmission(context: EndpointContext): Promise
     return { status: 400, body: { ok: false, error: "Malformed visitor payload." } };
   }
 
-  const submission = parsed.data;
+  const submission = parsed.data as VisitorSubmission;
   const timestamp = getRequestTimestamp();
   const location = await fetchGeoLocation(context.ip);
   const html = formatVisitorHtml(submission, timestamp, context.ip, location);
