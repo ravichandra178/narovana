@@ -52,6 +52,17 @@ Thumbs.db
 build
 out
 artifacts
+!artifacts/
+artifacts/*
+!artifacts/portfolio/
+!artifacts/portfolio/**
+artifacts/portfolio/build/
+artifacts/portfolio/dist/
+artifacts/portfolio/node_modules/
+artifacts/portfolio/.tsbuildinfo
+artifacts/portfolio/.replit-artifact/
+artifacts/portfolio/.DS_Store
+artifacts/portfolio/public/.DS_Store
 
 # env files
 .env

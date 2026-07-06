@@ -11,20 +11,51 @@ export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      subject: String(formData.get("subject") ?? ""),
+      message: String(formData.get("message") ?? ""),
+      website: String(formData.get("website") ?? ""),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const responseBody = await response.json().catch(() => null);
+
+      if (!response.ok) {
+        throw new Error(responseBody?.error ?? "L'envoi du message a échoué.");
+      }
+
       setIsSubmitting(false);
-      const form = e.target as HTMLFormElement;
       form.reset();
       toast({
         title: "Message envoyé !",
         description: "Je vous répondrai dans les plus brefs délais.",
       });
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Envoi impossible",
+        description: error instanceof Error ? error.message : "Veuillez réessayer dans un instant.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -108,26 +139,28 @@ export function Contact() {
             <div className="bg-card p-8 md:p-10 rounded-3xl shadow-xl border border-border/50">
               <h3 className="text-2xl font-bold font-display mb-6">Envoyez-moi un message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nom complet</Label>
-                    <Input id="name" required placeholder="Jean Dupont" className="bg-background" />
+                    <Input id="name" name="name" required placeholder="Jean Dupont" className="bg-background" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" required placeholder="jean@exemple.com" className="bg-background" />
+                    <Input id="email" name="email" type="email" required placeholder="jean@exemple.com" className="bg-background" />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="subject">Sujet</Label>
-                  <Input id="subject" required placeholder="Demande de devis..." className="bg-background" />
+                  <Input id="subject" name="subject" required placeholder="Demande de devis..." className="bg-background" />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea 
                     id="message" 
+                    name="message"
                     required 
                     placeholder="Décrivez-moi vos besoins en quelques mots..." 
                     className="min-h-[150px] bg-background resize-none" 

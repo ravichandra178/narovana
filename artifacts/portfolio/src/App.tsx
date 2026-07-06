@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Carte from "@/pages/carte";
+import { useVisitorTracking } from "@/hooks/useVisitorTracking";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,8 @@ function Router() {
 }
 
 function App() {
+  useVisitorTracking();
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
