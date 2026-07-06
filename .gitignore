@@ -71,3 +71,8 @@ artifacts/portfolio/public/.DS_Store
 
 # vercel
 .vercel
+
+server/*.js
+server/*.js.map
+api/*.js
+api/*.js.map
